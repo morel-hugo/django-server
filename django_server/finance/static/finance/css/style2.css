@@ -1,0 +1,126 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+
+:root
+{
+  --color_box_1 : #90a9e7;
+  --color_box_2 : #e5849b;
+  --color_box_3 : #f3d387;
+  --color_box_4 : #8fd9b3;
+}
+
+body
+{
+    background-color: #f0f4f6;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.contain_box
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.box_info_default
+{
+  height: 110px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  border-bottom-style: solid;
+
+  border-bottom-color: var(--color_box_1);
+  border-bottom-width: 4px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  /*box-shadow: 0px 0px 10px black;*/
+  background-color: white;
+}
+
+.box_info_2
+{
+  border-bottom-color: var(--color_box_2);
+}
+.box_info_3
+{
+  border-bottom-color: var(--color_box_3);
+}
+.box_info_4
+{
+  border-bottom-color: var(--color_box_4);
+}
+
+.text_info
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: Ubuntu-Regular;
+  color: #d1d3d4;
+  font-size: 20px;
+
+}
+
+.box_variable
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 30px;
+  color: #d1d3d4;
+
+  width: 100%;
+  position: relative;
+}
+
+
+.value_account
+{
+  margin-left: 20px;
+}
+
+.cercle_default
+{
+  width: 42px;
+  height: 42px;
+
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--color_box_1);
+
+  position: absolute;
+  right: 0;
+  margin-right: 35px;
+}
+
+.cercle_2
+{
+  border-color: var(--color_box_2);
+}
+.cercle_3
+{
+  border-color: var(--color_box_3);
+}
+.cercle_4
+{
+  border-color: var(--color_box_4);
+}
+
+/* -----------------------------  Charts  -----------------------------  */
+
+.basic_line
+{
+  width: 600px;
+}

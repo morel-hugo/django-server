@@ -1,0 +1,83 @@
+{% extends 'layouts/base.html' %}
+
+
+
+ {% block content %}
+<div class="head">
+  <h1>test</h1>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 contain_box">
+      <div class="box_info_default">
+        <div class="text_info">
+          <span>Balance</span>
+        </div>
+        <div class="row box_variable">
+          <span><i class="fas fa-euro-sign"></i></span>
+          <span class="value_account">{{ info_account.balance }}</span>
+          <div class="cercle_default"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 contain_box">
+      <div class="box_info_default box_info_2">
+        <div class="text_info">
+          <span>Fonds disponibles</span>
+        </div>
+        <div class="row box_variable">
+          <span><i class="fas fa-euro-sign"></i></span>
+          <span class="value_account">{{ info_account.fd }}</span>
+          <div class="cercle_default cercle_2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 contain_box">
+      <div class="box_info_default box_info_3">
+        <div class="text_info">
+          <span>Marge</span>
+        </div>
+        <div class="row box_variable">
+          <span><i class="fas fa-euro-sign"></i></span>
+          <span class="value_account">{{ info_account.marge }}</span>
+          <div class="cercle_default cercle_3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 contain_box">
+      <div class="box_info_default box_info_4">
+        <div class="text_info">
+          <span>Nombre de Trades</span>
+        </div>
+        <div class="row box_variable">
+          <span>+</span>
+          <span class="value_account">{{ info_account.nt}}</span>
+          <!-- <div class="cercle_default cercle_4"></div> -->
+
+          <div id="chart">
+             <embed style="width:80px;"type="image/svg+xml" src= "{{ chart2|safe }}" />
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- <div class="" style=""><span class="value_account"> {{ chart|safe }}</span></div> -->
+
+<div id="chart">
+   <embed class="basic_line" type="image/svg+xml" src= "{{ chart|safe }}" />
+</div>
+
+
+{% endblock %}
