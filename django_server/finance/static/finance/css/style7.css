@@ -1,0 +1,263 @@
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../fonts/ubuntu/Ubuntu-Regular.ttf');
+}
+
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../fonts/ubuntu/Ubuntu-Bold.ttf');
+}
+
+:root
+{
+  --color_box_1 : #90a9e7;
+  --color_box_2 : #e5849b;
+  --color_box_3 : #f3d387;
+  --color_box_4 : #8fd9b3;
+}
+
+body
+{
+    background-color: #f0f4f6;
+    width: 95%;
+    margin-left: 2.5%;
+}
+
+.contain_box
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.box_info_default
+{
+  height: 110px;
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  border-bottom-style: solid;
+
+  border-bottom-color: var(--color_box_1);
+  border-bottom-width: 4px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  /*box-shadow: 0px 0px 10px black;*/
+  background-color: white;
+}
+
+.box_info_2
+{
+  border-bottom-color: var(--color_box_2);
+}
+.box_info_3
+{
+  border-bottom-color: var(--color_box_3);
+}
+.box_info_4
+{
+  border-bottom-color: var(--color_box_4);
+}
+
+.text_info
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  /*font-family: Ubuntu-Regular;*/
+  color: #d1d3d4;
+  font-size: 20px;
+  font-family: 'Cantarell', sans-serif;
+  font-weight:bold;
+}
+
+.box_variable
+{
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 30px;
+  color: #d1d3d4;
+
+  width: 100%;
+  position: relative;
+}
+
+
+.container_account
+{
+  position: absolute;
+  margin-top: -15px;
+}
+
+.fas
+{
+  font-size: 40px;
+
+}
+
+.value_account
+{
+  margin-left: 20px;
+  font-weight:bold;
+  font-size: 45px;
+}
+
+.cercle_default
+{
+  width: 42px;
+  height: 42px;
+
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--color_box_1);
+
+  position: absolute;
+  right: 0;
+  margin-right: 35px;
+}
+
+.cercle_2
+{
+  border-color: var(--color_box_2);
+}
+.cercle_3
+{
+  border-color: var(--color_box_3);
+}
+.cercle_4
+{
+  border-color: var(--color_box_4);
+}
+
+/* -----------------------------  Charts  ----------------------------- */
+
+
+
+.solid_gauge
+{
+  width:80px;
+  float: right;
+
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  margin-top: -15px;
+  color: blue;
+}
+
+.container_header
+{
+  border-radius: 3px 3px 0px 0px;
+  margin-top: 50px;
+
+  height: 50px;
+  width: 100%;
+  background-color: #d1d3d4;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container_header span
+{
+  color: white;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+
+}
+.container_chart
+{
+  border-radius: 0px 0px 3px 3px;
+
+  background-color: white;
+  margin-bottom: 50px;
+}
+
+.basic_line
+{
+  height: 400px;
+  width:100%;
+}
+
+
+/* -----------------------------   Resume ----------------------------- */
+
+.container_header_2
+{
+  margin-top: 50px;
+  border-radius: 3px 3px 0px 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #d1d3d4;
+}
+
+.container_header_2 span
+{
+  color: white;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.fa-ellipsis-v
+{
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+}
+
+.fa-ellipsis-v:hover
+{
+  cursor: pointer;
+}
+
+.container_resume
+{
+  height: 400px;
+  border-radius: 0px 0px 3px 3px;
+  background-color: white;
+
+}
+
+.basic_pie
+{
+  height: 400px;
+  width:100%;
+}
+
+/* -----------------------------   Historique   ----------------------------- */
+
+.header_historique
+{
+
+  border-radius: 3px 3px 0px 0px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #d1d3d4;
+}
+
+.header_historique span
+{
+  color: white;
+  font-family: 'Cantarell', sans-serif;
+  font-size: 20px;
+  margin-left: 40px;
+}
+
+.historique
+{
+  background-color: white;
+  height: 200px;
+  border-radius: 0px 0px 3px 3px;
+  margin-bottom: 30px;
+}

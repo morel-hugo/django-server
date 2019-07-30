@@ -4,7 +4,7 @@
 
  {% block content %}
 <div class="head">
-  <h1>test</h1>
+  <h1>Portefeuille</h1>
 </div>
 
 <div class="container-fluid">
@@ -16,9 +16,14 @@
           <span>Balance</span>
         </div>
         <div class="row box_variable">
-          <span><i class="fas fa-euro-sign"></i></span>
-          <span class="value_account">{{ info_account.balance }}</span>
-          <div class="cercle_default"></div>
+          <div class="container_account">
+              <span><i class="fas fa-euro-sign"></i></span>
+              <span class="value_account">{{ info_account.balance }}</span>
+          </div>
+          <!-- <div class="cercle_default"></div> -->
+          <div id="">
+             <embed class="solid_gauge" type="image/svg+xml" src= "{{ gauge_0|safe }}" />
+          </div>
         </div>
       </div>
     </div>
@@ -29,9 +34,14 @@
           <span>Fonds disponibles</span>
         </div>
         <div class="row box_variable">
-          <span><i class="fas fa-euro-sign"></i></span>
-          <span class="value_account">{{ info_account.fd }}</span>
-          <div class="cercle_default cercle_2"></div>
+          <div class="container_account">
+              <span><i class="fas fa-euro-sign"></i></span>
+              <span class="value_account">{{ info_account.fd }}</span>
+          </div>
+          <!-- <div class="cercle_default cercle_2"></div> -->
+          <div id="">
+             <embed class="solid_gauge" type="image/svg+xml" src= "{{ gauge_1|safe }}" />
+          </div>
         </div>
       </div>
     </div>
@@ -42,9 +52,14 @@
           <span>Marge</span>
         </div>
         <div class="row box_variable">
-          <span><i class="fas fa-euro-sign"></i></span>
-          <span class="value_account">{{ info_account.marge }}</span>
-          <div class="cercle_default cercle_3"></div>
+          <div class="container_account">
+              <span><i class="fas fa-euro-sign"></i></span>
+              <span class="value_account">{{ info_account.marge }}</span>
+          </div>
+          <!-- <div class="cercle_default cercle_3"></div> -->
+          <div id="">
+             <embed class="solid_gauge" type="image/svg+xml" src= "{{ gauge_2|safe }}" />
+          </div>
         </div>
       </div>
     </div>
@@ -52,22 +67,22 @@
     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 contain_box">
       <div class="box_info_default box_info_4">
         <div class="text_info">
-          <span>Nombre de Trades</span>
+          <span>Nb Trades</span>
         </div>
         <div class="row box_variable">
-          <span>+</span>
-          <span class="value_account">{{ info_account.nt}}</span>
+          <div class="container_account">
+              <span>+</span>
+              <span class="value_account">{{ info_account.nt}}</span>
+          </div>
           <!-- <div class="cercle_default cercle_4"></div> -->
-
-          <div id="chart">
-             <embed style="width:80px;"type="image/svg+xml" src= "{{ chart2|safe }}" />
+          <div id="">
+             <embed  class="solid_gauge" type="image/svg+xml" src= "{{ gauge_3|safe }}" />
           </div>
 
 
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
@@ -75,9 +90,36 @@
 
 <!-- <div class="" style=""><span class="value_account"> {{ chart|safe }}</span></div> -->
 
-<div id="chart">
-   <embed class="basic_line" type="image/svg+xml" src= "{{ chart|safe }}" />
+<div class="row">
+    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 container_header_chart">
+        <div class="container_header">
+              <span>Profit portefeuille</span>
+              <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="container_chart">
+              <embed class="basic_line" type="image/svg+xml" src= "{{ chart|safe }}" />
+        </div>
+    </div>
+
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 container_f">
+        <div class="container_header_2">
+              <span>Resume</span>
+              <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <div class="container_resume">
+              <embed class="basic_pie" type="image/svg+xml" src= "{{ chart3|safe }}" />
+        </div>
+    </div>
 </div>
 
+<div class="container_historique">
+  <div class="header_historique">
+      <span>Trades Historique</span>
+      <i class="fas fa-ellipsis-v"></i>
+  </div>
+  <div class="historique">
+
+  </div>
+</div>
 
 {% endblock %}
